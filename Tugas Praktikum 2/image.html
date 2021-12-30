@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Gambar</title>
+</head>
+<body>
+    <style>
+        *{
+            background-color: rgb(2, 173, 179);
+            margin-top: auto;
+            align-items: center;
+            text-align: center;
+            border-style: solid;
+        }
+    </style>
+    <select name="" id="daftar" onchange="tampil()">
+        <option value="">-Pilih Hewan-</option>
+        <option value="kucing">Kucing</option>
+        <option value="harimau">Harimau</option>
+        <option value="elang">elang</option>
+        <option value="kelinci">Kelinci</option>
+        <option value="panda">Panda</option>
+        <option value="kangguru">Kangguru</option>
+        <option value="kuda">Kuda</option>
+    </select>
+    <div id="hasil"></div>
+
+    <script>
+        let daftar = document.getElementById("daftar")
+        let hasil = document.getElementById("hasil")
+
+        function tampil(){
+            switch (daftar.value) {
+                case "kucing":
+                hasil.innerHTML = '<img src="https://asset.kompas.com/crops/XkEU4EX8xvk3RCBUAQj4Kiguwxk=/105x71:943x630/750x500/data/photo/2021/07/13/60ed55dc7c8ae.jpeg" alt="">'
+                alert("ini adalah gambar Kucing")
+                break;
+
+                case "harimau":
+                hasil.innerHTML = '<img src="https://cdn.opini.id/opini3_question_image/content/cover/pa3zboZUEh9ZkVD11pLR" alt="">'
+                alert("ini adalah gambar Harimau")
+                break;
+
+                case "elang":
+                hasil.innerHTML = '<img src="https://media.suara.com/pictures/970x544/2020/06/01/66141-elang-botak.jpg" alt="">'
+                alert("ini adalah gambar elang")
+                break;
+
+                case "kelinci":
+                hasil.innerHTML = '<img src="https://satriahewan.com/wp-content/uploads/2019/09/kelinci-dutch-min.jpg" alt="">'
+                alert("ini adalah gambar Kelinci")
+                break;
+
+                case "panda":
+                hasil.innerHTML = '<img src="https://www.ivanruna.my.id/wp-content/uploads/2020/12/Cara-Menghilangkan-Rasa-Malas.jpg" alt="">'
+                alert("ini adalah gambar Panda")
+                break;
+
+                case "kangguru":
+                hasil.innerHTML = '<img src="https://beritapapua.id/wp-content/uploads/2020/07/wallaby1-e1514947803886.jpg" alt="">'
+                alert("ini adalah gambar Kangguru")
+                break;
+
+                case "kuda":
+                hasil.innerHTML = '<img src="https://duniaq.com/wp-content/uploads/2015/12/Kuda-Gambar.jpg" alt="">'
+                alert("ini adalah gambar Kuda")
+                break;
+
+                default:
+                    hasil.innerHTML =""
+            }
+        }
+    </script>
+</body>
+</html>
